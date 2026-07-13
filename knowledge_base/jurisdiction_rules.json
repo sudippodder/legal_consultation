@@ -1,0 +1,135 @@
+{
+    "jurisdictions": [
+        {
+            "name": "India",
+            "code": "IN",
+            "legal_system": "Common Law (based on English law)",
+            "key_contract_laws": [
+                "Indian Contract Act, 1872",
+                "Sale of Goods Act, 1930",
+                "Specific Relief Act, 1963",
+                "Indian Partnership Act, 1932",
+                "Companies Act, 2013",
+                "Information Technology Act, 2000",
+                "Consumer Protection Act, 2019"
+            ],
+            "employment_laws": [
+                "Industrial Disputes Act, 1947",
+                "Payment of Wages Act, 1936",
+                "Employees' Provident Fund Act, 1952",
+                "Payment of Bonus Act, 1965",
+                "Maternity Benefit Act, 1961",
+                "Sexual Harassment at Workplace Act, 2013"
+            ],
+            "property_laws": [
+                "Transfer of Property Act, 1882",
+                "Registration Act, 1908",
+                "Indian Stamp Act, 1899",
+                "Real Estate (Regulation and Development) Act, 2016 (RERA)"
+            ],
+            "non_compete_enforceability": "Generally unenforceable post-employment under Section 27 of the Indian Contract Act (restraint of trade). Limited enforceability during employment.",
+            "dispute_resolution": "Courts, Arbitration (Arbitration and Conciliation Act, 1996), Consumer Forums, Lok Adalats, NCLT (for company disputes)",
+            "important_notes": [
+                "Stamp duty varies by state",
+                "e-Agreements valid under IT Act 2000",
+                "NDA enforcement varies by specificity and reasonableness",
+                "Specific performance is court's discretion under Specific Relief Act"
+            ]
+        },
+        {
+            "name": "United States",
+            "code": "US",
+            "legal_system": "Common Law (federal and state)",
+            "key_contract_laws": [
+                "Uniform Commercial Code (UCC)",
+                "Restatement (Second) of Contracts",
+                "Federal Arbitration Act",
+                "State contract laws (vary by state)"
+            ],
+            "employment_laws": [
+                "Fair Labor Standards Act (FLSA)",
+                "Title VII of the Civil Rights Act",
+                "Americans with Disabilities Act (ADA)",
+                "Family and Medical Leave Act (FMLA)",
+                "At-will employment (most states)"
+            ],
+            "non_compete_enforceability": "Varies significantly by state. California bans most non-competes. Other states allow them if reasonable in scope, duration, and geography.",
+            "dispute_resolution": "Federal and State Courts, Arbitration (AAA, JAMS), Mediation",
+            "important_notes": [
+                "Laws vary significantly by state",
+                "At-will employment in most states",
+                "Class action lawsuits common",
+                "FTC proposed ban on non-competes (2024)"
+            ]
+        },
+        {
+            "name": "United Kingdom",
+            "code": "GB",
+            "legal_system": "Common Law",
+            "key_contract_laws": [
+                "Common law principles",
+                "Unfair Contract Terms Act 1977",
+                "Consumer Rights Act 2015",
+                "Sale of Goods Act 1979",
+                "Supply of Goods and Services Act 1982"
+            ],
+            "employment_laws": [
+                "Employment Rights Act 1996",
+                "Equality Act 2010",
+                "Working Time Regulations 1998",
+                "National Minimum Wage Act 1998"
+            ],
+            "non_compete_enforceability": "Enforceable if reasonable in scope, duration, and geography. Must protect legitimate business interests. Typical maximum 6-12 months.",
+            "dispute_resolution": "Courts, Employment Tribunals, Arbitration, ACAS Conciliation",
+            "important_notes": [
+                "Post-Brexit, EU law no longer directly applies",
+                "Common law precedent system",
+                "Strong employee protections",
+                "GDPR-equivalent data protection (UK GDPR)"
+            ]
+        },
+        {
+            "name": "European Union",
+            "code": "EU",
+            "legal_system": "Civil Law (most member states) with EU directives",
+            "key_contract_laws": [
+                "EU Consumer Rights Directive",
+                "EU Unfair Terms Directive",
+                "Rome I Regulation (applicable law for contracts)",
+                "Brussels I Regulation (jurisdiction)"
+            ],
+            "employment_laws": [
+                "EU Working Time Directive",
+                "EU Equal Treatment Directive",
+                "National employment laws of member states"
+            ],
+            "non_compete_enforceability": "Varies by member state. Generally enforceable if reasonable, with compensation during restriction period required in many countries.",
+            "dispute_resolution": "National Courts, EU Court of Justice, Arbitration",
+            "important_notes": [
+                "GDPR governs data protection",
+                "Consumer protection is strong",
+                "Contract law primarily national, not EU-wide",
+                "Cross-border enforcement via EU regulations"
+            ]
+        },
+        {
+            "name": "General / International",
+            "code": "INTL",
+            "legal_system": "Various",
+            "key_contract_laws": [
+                "UNIDROIT Principles of International Commercial Contracts",
+                "United Nations Convention on Contracts for the International Sale of Goods (CISG)",
+                "ICC Uniform Rules",
+                "UNCITRAL Model Law on International Commercial Arbitration"
+            ],
+            "non_compete_enforceability": "Depends on the governing law chosen in the contract and the jurisdiction where enforcement is sought.",
+            "dispute_resolution": "International Arbitration (ICC, LCIA, SIAC, HKIAC), National Courts",
+            "important_notes": [
+                "Choice of governing law is critical",
+                "Arbitration clauses recommended for cross-border contracts",
+                "Language and currency should be specified",
+                "Consider cultural and legal differences"
+            ]
+        }
+    ]
+}

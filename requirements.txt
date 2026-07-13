@@ -1,0 +1,29 @@
+# AI Legal Consultation Platform - Dependencies
+
+# Core Framework
+streamlit>=1.35.0
+
+# OpenAI LLM
+openai>=1.30.0
+
+# Document Processing
+PyMuPDF>=1.24.0          # PDF text extraction (imported as fitz)
+python-docx>=1.1.0       # DOCX parsing
+
+# RAG & Embeddings
+sentence-transformers>=3.0.0
+numpy>=1.26.0
+
+# PDF Report Generation
+fpdf2>=2.8.0
+
+# Authentication
+bcrypt>=4.1.0
+
+# Utilities
+python-dateutil>=2.9.0
+python-dotenv>=1.0.0
+Pillow>=10.3.0
+
+# Plotting
+plotly>=5.22.0
