@@ -40,14 +40,6 @@ st.markdown("---")
 st.markdown("### 🔑 API Configuration")
 
 with st.form("api_settings"):
-    api_key = st.text_input(
-        "OpenAI API Key",
-        value=st.session_state.get("openai_api_key", ""),
-        type="password",
-        placeholder="sk-...",
-        help="Your OpenAI API key. Get one at https://platform.openai.com/api-keys"
-    )
-
     model = st.selectbox(
         "AI Model",
         options=AVAILABLE_MODELS,
@@ -58,7 +50,6 @@ with st.form("api_settings"):
     )
 
     if st.form_submit_button("💾 Save API Settings", use_container_width=True):
-        st.session_state.openai_api_key = api_key
         st.session_state.selected_model = model
         db.log_action(st.session_state.user_id, "settings", "Updated API settings")
         st.success("✅ API settings saved!")

@@ -90,17 +90,13 @@ MAX_CHAT_HISTORY = 50
 
 
 def get_openai_api_key():
-    """Retrieve the OpenAI API key from session state, environment, or secrets."""
-    # 1. Check session state (user-configured in Settings page)
-    if "openai_api_key" in st.session_state and st.session_state.openai_api_key:
-        return st.session_state.openai_api_key
-
-    # 2. Check environment variable
+    """Retrieve the OpenAI API key from environment, or secrets."""
+    # 1. Check environment variable
     env_key = os.environ.get("OPENAI_API_KEY")
     if env_key:
         return env_key
 
-    # 3. Check Streamlit secrets
+    # 2. Check Streamlit secrets
     try:
         return st.secrets.get("OPENAI_API_KEY", None)
     except Exception:

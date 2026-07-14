@@ -295,11 +295,31 @@ with st.expander("📜 Past Analyses", expanded=False):
     if past:
         for a in past:
             r_emoji = risk_agent.get_risk_emoji(a.get("overall_risk_score", 0))
-            st.markdown(
-                f"{r_emoji} **{a.get('filename', 'Unknown')}** — "
-                f"Risk: {a.get('overall_risk_score', 0)}/10 | "
-                f"Type: {a.get('contract_type', 'N/A')} | "
-                f"{a.get('created_at', '')}"
-            )
+            col1, col2 = st.columns([4, 1])
+            with col1:
+                st.markdown(
+                    f"{r_emoji} **{a.get('filename', 'Unknown')}** — "
+                    f"Risk: {a.get('overall_risk_score', 0)}/10 | "
+                    f"Type: {a.get('contract_type', 'N/A')} | "
+                    f"{a.get('created_at', '')}"
+                )
+            with col2:
+                if st.button("View Details", key=f"view_past_{a.get('id', 0)}"):
+                    st.session_state.last_analysis = {
+                        "overall_risk_score": a.get("overall_risk_score", 0),
+                        "clauses": json.loads(a.get("clauses_json", "[]")),
+                        "recommendations": json.loads(a.get("recommendations_json", "[]")),
+                        "summary": a.get("summary", ""),
+                        "confidence_score": a.get("confidence_score", 0),
+                    }
+                    st.session_state.last_analysis_meta = {
+                        "filename": a.get("filename", "Unknown"),
+                        "contract_type": a.get("contract_type", "N/A"),
+                        "jurisdiction": a.get("jurisdiction", ""),
+                        "validation": {},
+                        "analysis_id": a.get("id", 0),
+                        "doc_id": a.get("document_id", 0),
+                    }
+                    st.rerun()
     else:
         st.caption("No past analyses yet. Upload a contract to get started!")

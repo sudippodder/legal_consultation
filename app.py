@@ -556,10 +556,10 @@ def show_main_page():
         st.info("📑 **Document Summary**\n\nGo to the sidebar → `📑 Document Summary` to summarize legal documents.")
 
     # API key notice
-    if not st.session_state.get("openai_api_key"):
+    if not os.environ.get("OPENAI_API_KEY"):
         st.warning(
             "⚠️ **OpenAI API Key not configured.** "
-            "Go to **⚙️ Settings** in the sidebar to add your API key for AI features to work."
+            "Please add your API key to the `.env` file for AI features to work."
         )
 
     # Disclaimer
